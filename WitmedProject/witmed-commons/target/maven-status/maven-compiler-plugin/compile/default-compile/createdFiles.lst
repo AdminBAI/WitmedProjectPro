@@ -1,7 +1,0 @@
-com\whackon\witmed\base\controller\BaseController.class
-com\whackon\witmed\base\pojo\enums\Status.class
-com\whackon\witmed\base\pojo\vo\ResponseVO.class
-com\whackon\witmed\base\pojo\vo\BaseVO.class
-com\whackon\witmed\base\pojo\vo\PageVO.class
-com\whackon\witmed\base\configuration\SwaggerConfiguration.class
-com\whackon\witmed\base\pojo\enums\ResponseCode.class
