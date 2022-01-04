@@ -14,4 +14,9 @@ import lombok.Data;
 @Data
 public class DepartmentVO extends BaseVO {
 	private static final long serialVersionUID = 5422723187036639884L;
+	private Long id;                        // 主键
+	private HospitalVO hospitalVO;          // 所在医院
+	private DepartmentVO parentVO;          // 上级部门
+	private String code;                    // 部门编码
+	private String name;                    // 部门名称
 }

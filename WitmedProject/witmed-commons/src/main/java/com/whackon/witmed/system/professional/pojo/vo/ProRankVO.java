@@ -14,4 +14,7 @@ import lombok.Data;
 @Data
 public class ProRankVO extends BaseVO {
 	private static final long serialVersionUID = 7363309550345560124L;
+	private Long id;                 // 主键
+	private String code;            // 编码
+	private String name;            // 名称
 }

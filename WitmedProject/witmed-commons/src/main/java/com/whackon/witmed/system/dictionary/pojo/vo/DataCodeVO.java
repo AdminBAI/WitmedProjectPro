@@ -14,4 +14,8 @@ import lombok.Data;
 @Data
 public class DataCodeVO extends BaseVO {
 	private static final long serialVersionUID = 4570131083874692406L;
+	private Long id;                        // 主键
+	private DataCodeVO parentVO;            // 上级数据
+	private String code;                    // 编码
+	private String name;                    // 名称
 }

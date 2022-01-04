@@ -14,4 +14,7 @@ import lombok.Data;
 @Data
 public class ProRank extends BaseEntity {
 	private static final long serialVersionUID = -8698126882863934465L;
+	private Long id;                 // 主键
+	private String code;            // 编码
+	private String name;            // 名称
 }

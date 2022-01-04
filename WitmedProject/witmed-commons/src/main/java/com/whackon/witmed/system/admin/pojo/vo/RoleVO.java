@@ -14,4 +14,7 @@ import lombok.Data;
 @Data
 public class RoleVO extends BaseVO {
 	private static final long serialVersionUID = -8891884516513232086L;
+	private Long id;                    // 主键
+	private String code;                // 角色编码
+	private String name;                // 角色名称
 }

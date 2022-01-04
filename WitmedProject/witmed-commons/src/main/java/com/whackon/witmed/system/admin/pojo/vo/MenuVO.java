@@ -14,4 +14,11 @@ import lombok.Data;
 @Data
 public class MenuVO extends BaseVO {
 	private static final long serialVersionUID = -1629398658391223735L;
+	private Long id;                        // 主键
+	private String code;                    // 角色编码
+	private MenuVO parentVO;                // 上级菜单
+	private String text;                    // 菜单文本
+	private String url;                     // 链接地址
+	private String icon;                    // 菜单图标样式
+	private String sort;                    // 排序
 }

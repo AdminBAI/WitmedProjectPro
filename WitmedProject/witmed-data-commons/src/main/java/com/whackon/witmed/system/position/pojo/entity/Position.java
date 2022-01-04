@@ -14,4 +14,7 @@ import lombok.Data;
 @Data
 public class Position extends BaseEntity {
 	private static final long serialVersionUID = 2453178190528955472L;
+	private Long id;                // 主键
+	private String code;            // 编码
+	private String name;            // 名称
 }

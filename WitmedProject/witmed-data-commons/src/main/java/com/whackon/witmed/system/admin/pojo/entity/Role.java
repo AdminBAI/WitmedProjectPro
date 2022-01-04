@@ -14,4 +14,7 @@ import lombok.Data;
 @Data
 public class Role extends BaseEntity {
 	private static final long serialVersionUID = 3832012392097686144L;
+	private Long id;                    // 主键
+	private String code;                // 角色编码
+	private String name;                // 角色名称
 }

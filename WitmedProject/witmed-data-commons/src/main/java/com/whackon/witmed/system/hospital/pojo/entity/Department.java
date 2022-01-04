@@ -14,4 +14,9 @@ import lombok.Data;
 @Data
 public class Department extends BaseEntity {
 	private static final long serialVersionUID = -5793475151487271519L;
+	private Long id;                        // 主键
+	private Hospital hospital;              // 所在医院
+	private Department parent;              // 上级部门
+	private String code;                    // 部门编码
+	private String name;                    // 部门名称
 }

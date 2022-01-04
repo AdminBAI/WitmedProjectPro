@@ -14,4 +14,8 @@ import lombok.Data;
 @Data
 public class DataCode extends BaseEntity {
 	private static final long serialVersionUID = 77283056160711451L;
+	private Long id;                        // 主键
+	private DataCode parent;                // 上级数据
+	private String code;                    // 编码
+	private String name;                    // 名称
 }
