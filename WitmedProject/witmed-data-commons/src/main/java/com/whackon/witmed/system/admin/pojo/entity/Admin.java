@@ -1,8 +1,6 @@
 package com.whackon.witmed.system.admin.pojo.entity;
 
 import com.whackon.witmed.base.pojo.entity.BaseEntity;
-import com.whackon.witmed.system.dictionary.pojo.entity.Identity;
-import com.whackon.witmed.system.hospital.pojo.entity.Department;
 import lombok.Data;
 
 /**
@@ -21,9 +19,9 @@ public class Admin extends BaseEntity {
 	private String name;                           // 姓名
 	private String cellphone;                      // 手机号码
 	private String password;                       // 登录密码
-	private Role role;                             // 角色
-	private Identity identity;                     // 身份
-	private Department department;                 // 所在部门
+	private String role;                           // 角色
+	private String identity;                       // 身份
+	private String department;                     // 所在部门
 	private String techPos;                        // 服务者专业技术职务
 	private String education;                      // 学历
 	private String techPosRank;                    // 服务者专业技术职务等级

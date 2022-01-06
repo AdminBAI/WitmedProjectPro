@@ -30,6 +30,7 @@
 		<pagehelper-spring-boot-starter.version>1.4.1</pagehelper-spring-boot-starter.version>
 		<mapstruct.version>1.4.2.Final</mapstruct.version>
 		<lombok.versioin>1.18.22</lombok.versioin>
+		<java-jwt.version>3.18.2</java-jwt.version>
 	</properties>
 
 	<dependencies>
