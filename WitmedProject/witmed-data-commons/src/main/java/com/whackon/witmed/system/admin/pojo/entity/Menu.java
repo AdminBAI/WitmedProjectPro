@@ -1,5 +1,7 @@
 package com.whackon.witmed.system.admin.pojo.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.whackon.witmed.base.pojo.entity.BaseEntity;
 import lombok.Data;
 
@@ -12,13 +14,21 @@ import lombok.Data;
  * @since 1.0.0
  */
 @Data
+@TableName("sys_menu")
 public class Menu extends BaseEntity {
-	private static final long serialVersionUID = 6494472229034048736L;
-	private Long id;                        // 主键
-	private String code;                    // 角色编码
-	private Menu parent;                    // 上级菜单
-	private String text;                    // 菜单文本
-	private String url;                     // 链接地址
-	private String icon;                    // 菜单图标样式
-	private String sort;                    // 排序
+	private static final long serialVersionUID = -2535496865380166958L;
+	@TableField(value = "id")
+	private Integer id;                        // 主键
+	@TableField(value = "code")
+	private String code;                       // 角色编码
+	@TableField(value = "parent")
+	private String parent;                     // 上级菜单
+	@TableField(value = "text")
+	private String text;                       // 菜单文本
+	@TableField(value = "url")
+	private String url;                        // 链接地址
+	@TableField(value = "icon")
+	private String icon;                       // 菜单图标样式
+	@TableField(value = "sort")
+	private Integer sort;                      // 排序
 }

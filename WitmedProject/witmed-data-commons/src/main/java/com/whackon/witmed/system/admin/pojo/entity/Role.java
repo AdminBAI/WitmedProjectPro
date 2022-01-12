@@ -1,5 +1,7 @@
 package com.whackon.witmed.system.admin.pojo.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.whackon.witmed.base.pojo.entity.BaseEntity;
 import lombok.Data;
 
@@ -12,9 +14,13 @@ import lombok.Data;
  * @since 1.0.0
  */
 @Data
+@TableName("sys_role")
 public class Role extends BaseEntity {
-	private static final long serialVersionUID = 3832012392097686144L;
-	private Long id;                    // 主键
-	private String code;                // 角色编码
-	private String name;                // 角色名称
+	private static final long serialVersionUID = -7281318327319583539L;
+	@TableField(value = "id")
+	private Integer id;                        // 主键
+	@TableField(value = "code")
+	private String code;                        // 角色编码
+	@TableField(value = "name")
+	private String name;                        // 角色名称
 }

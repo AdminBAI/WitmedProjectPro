@@ -13,7 +13,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * @version 1.0.0
  * @since 1.0.0
  */
-@MapperScan("com.whackon.witmed.*.dao")
+@MapperScan("com.whackon.witmed.system.*.dao")
 @EnableEurekaClient
 @SpringBootApplication
 public class SystemProviderStarter {
