@@ -1,13 +1,13 @@
 package com.whackon.witmed.util;
 
-import com.whackon.witmed.system.admin.pojo.entity.Admin;
+import com.whackon.witmed.entity.system.admin.Admin;
 import com.whackon.witmed.system.admin.pojo.vo.AdminVO;
 import javax.annotation.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-01-09T14:48:36+0800",
+    date = "2022-01-13T15:29:34+0800",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 1.8.0_301 (Oracle Corporation)"
 )
 @Component
@@ -31,8 +31,6 @@ public class PojoMapperImpl implements PojoMapper {
         adminVO.setName( entity.getName() );
         adminVO.setCellphone( entity.getCellphone() );
         adminVO.setPassword( entity.getPassword() );
-        adminVO.setTechPos( entity.getTechPos() );
-        adminVO.setTechPosRank( entity.getTechPosRank() );
 
         return adminVO;
     }
