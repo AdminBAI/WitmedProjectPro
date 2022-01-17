@@ -73,12 +73,27 @@ public class AdminController extends BaseController {
 		String token = TokenUtil.createToken(claimMap, BaseConstants.EXPIRE_AUTH_SEC);
 		// 以 Token 为 key 以用户对象为 value 存储到 Redis中去
 		if (redisUtil.saveToRedis(token,adminVO,BaseConstants.EXPIRE_AUTH_SEC)){
-			// 存储成功 ，将 token 返回给用户，为了将 token 交给用户存储，可以把 token 绑定
-			// 在 HTTP 响应对象的消息头的部分 Authorization
-			response.setHeader("Authorization",token);
-			return ResponseVO.success("系统登录成功", adminVO);
+			// 将 token 和当前登录用户信息扩展到 AdminLoginVO 中
+			adminLoginVO.setToken(token);
+			adminLoginVO.setAdminVO(adminVO);
+			return ResponseVO.success("登录成功", adminLoginVO);
 		}
 		return ResponseVO.error("系统登录失败");
+	}
+
+	/**
+	 * <b>根据 token 信息获得当前登录用户信息</b>
+	 * @param token
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping ("/info")
+	public ResponseVO getLoginUserByToken(String token) throws Exception{
+		AdminVO adminVO = (AdminVO) redisUtil.findFromRedis(token, AdminVO.class);
+		if (adminVO != null){
+			return ResponseVO.success("当前用户登录成功",adminVO);
+		}
+		return  ResponseVO.error("获取失败");
 	}
 }
 
